@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu FLEXBOX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 580px)">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: #333;
+        }
+        .mobile-menu a {
+            padding: 15px;
+            border-bottom: 1px solid #555;
+        }
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        footer {
+            text-align: center; /* Centraliza o texto dentro do footer */
+            padding: 10px; /* Adiciona um espaçamento interno */
+            background-color: #f1f1f1; /* Apenas um exemplo de cor de fundo */
+
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 30px; /* Altura do footer, ajuste conforme necessário */
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Menu SITE</h1>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <nav class="mobile-menu">
+            <a href="#" onclick="selectItem()">Opcao 0</a>
+            <a href="#" onclick="selectItem()">Opcao 1</a>
+            <a href="#" onclick="selectItem()">Opcao 2</a>
+            <a href="#" onclick="selectItem()">Opcao 3</a>
+            <a href="#" onclick="selectItem()">Opcao 4</a>
+            <a href="#" onclick="selectItem()">Opcao 5</a>
+            <a href="#" onclick="selectItem()">Opcao 6</a>
+        </nav>
+        <nav class="menu">
+            <a href="">Opcao 0</a>
+            <a href="">Opcao 1</a>
+            <a href="">Opcao 2</a>
+            <a href="">Opcao 3</a>
+            <a href="">Opcao 4</a>
+            <a href="">Opcao 5</a>
+            <a href="">Opcao 6</a>
+        </nav>   
+    </header>
+    <main>
+        <h2>TESTE FLEXBOX</h2>
+        <p>Conteúdo de exemplo...</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore aut nulla commodi maxime itaque dolorem nobis laborum saepe veniam. Iste modi harum ea eum earum nisi asperiores, eos est? Nobis error corrupti, iure tenetur eos dolores saepe, aspernatur fugit dolore iste ratione tempore amet doloremque laudantium illum, dicta dolorum. Aut qui fuga maxime laboriosam voluptatibus temporibus beatae facilis asperiores, eum explicabo nobis error vel nihil dolores tempora recusandae sunt cumque repellendus veniam. Molestias nihil porro illo cupiditate laborum dolorem et fugiat itaque, accusamus repellendus id amet necessitatibus unde possimus reiciendis. Corporis officia molestiae adipisci possimus necessitatibus molestias fugit error voluptates blanditiis alias excepturi impedit veritatis aliquid omnis qui sequi, eveniet dolorem eum accusantium, dolore nobis laborum at doloremque. Enim modi ducimus magnam veniam harum nemo eveniet consectetur repellendus obcaecati! Autem magnam culpa ullam! Obcaecati consequatur neque nihil ab adipisci quam dolores nam nulla explicabo voluptatum doloremque delectus minima molestias sunt eos veniam provident, culpa architecto ullam natus sint modi deleniti tenetur ipsa! Earum numquam corrupti minus autem, tenetur voluptate quaerat ab, tempore rerum veniam sit temporibus libero natus consequatur rem necessitatibus officia dignissimos asperiores. Veniam fuga deserunt sint hic nobis? Dolor praesentium aliquam perspiciatis rerum? Rerum distinctio quae labore sit.</p>
+    </main>
+    <footer>
+        <p class="footer_p">© Todos os direitos reservados</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.toggle('active');
+        }
+
+        function selectItem() {
+            const menu = document.querySelector('.mobile-menu');
+            menu.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

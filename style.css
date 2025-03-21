@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    background-color: lightgrey;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* MENU INICIO */
+
+nav {
+    display: flex;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #333;
+}
+.mobile-menu a {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+.mobile-menu.active {
+    display: flex;
+}
+/*MENU FIM*/
+
+
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header > h1 {
+    border: 1px dotted black;
+    flex: 0 0 350px;
+    text-shadow: 2px 2px 0px rgba(0,0,0.404 );
+}
+
+header > nav{
+    border: 1px dotted black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+header > nav > a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+header > nav > a:hover {
+    background-color: white;
+    color: black;
+    transition: background-color .5s;
+}
+
+
+
+
+
+main{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+}
+
+footer {
+    text-align: center; /* Centraliza o texto dentro do footer */
+    padding: 10px; /* Adiciona um espaçamento interno */
+    background-color: #f1f1f1; /* Apenas um exemplo de cor de fundo */
+
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 30px; /* Altura do footer, ajuste conforme necessário */
+}
+
